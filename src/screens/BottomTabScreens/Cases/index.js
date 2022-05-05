@@ -6,16 +6,18 @@ import { ref, onValue } from 'firebase/database';
 import { useState } from 'react/cjs/react.production.min';
 import { Button } from 'react-native-web';
 
-
 export default function Cases(){
-  //const [test_case, setCase] = useState({})
-
+  
+  //const [cases, setCase] = useState([])
+  let date_time = new Date().toLocaleString();
+  
   function readData(){
     const starCountRef = ref(db, 'Accidents/CaseID');
     onValue(starCountRef, (snapshot) => {
       const data = snapshot.val();
+      console.log(date_time)
       console.log(data);
-      //setCase(data,test_case);
+      
 });
 
   }
@@ -24,6 +26,8 @@ export default function Cases(){
     <View >
       <Text onPress={readData}> hello </Text>
       <StatusBar style="light" backgroundColor="black"/>
+
+
     </View>
   )
 }
