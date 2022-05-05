@@ -1,8 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { SafeAreaView, StyleSheet, Text, View,Platform ,StatusBar} from 'react-native';
 import { useFonts } from 'expo-font';
 
-import MainScreen from './src/screens/MainScreen'
+import Main from './src/navigation/Main'
 
 export default function App() {
 
@@ -26,9 +26,9 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <MainScreen/>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Main/>
+    </SafeAreaView>
   );
 }
 
@@ -36,5 +36,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    marginTop:Platform.OS==='ios'?0:StatusBar.currentHeight 
   },
 });
