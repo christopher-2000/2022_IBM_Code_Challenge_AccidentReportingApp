@@ -2,7 +2,7 @@ import { View, Text ,Image, FlatList, Platform} from 'react-native';
 import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import styles from './style';
-//import * as Location from 'expo-location';
+import * as Location from 'expo-location';
 import { db } from '../../../../components/config';
 import { ref, set } from 'firebase/database';
 
@@ -24,18 +24,19 @@ export default function Home(){
     })();
   }, []);
 
-  let text = 'Waiting..';
-  if (errorMsg) {
-    text = errorMsg;
-  } else if (location) {
-    text = JSON.stringify(location);
-  }
+  
 
   // Function for submitting the Accident Case
   function submitCase(){
     let date = new Date().toLocaleDateString();
     let time = new Date().toLocaleTimeString();
     let date_time = new Date().toLocaleString();
+    let text = 'Waiting..';
+    if (errorMsg) {
+      text = errorMsg;
+    } else if (location) {
+      text = location;
+    }
     
     set(ref(db,'Accidents/' + date_time),
       {
@@ -53,10 +54,10 @@ export default function Home(){
         "hospital name": "",
         "images links": "",
         "injured": "",
-        "location": "",
+        "location": text,
         "police description": "",
         "police station": "",
-        "status": "",
+        "status": "Ambulance Requested",
         "time reported": time,
         "vehicle number": "",
         "witness descriptions": ""

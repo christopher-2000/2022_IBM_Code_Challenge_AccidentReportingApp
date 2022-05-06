@@ -1,33 +1,40 @@
-import { View, Text ,Image,FlatList} from 'react-native'
+import { ScrollView, Text ,Image,FlatList} from 'react-native'
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { db } from '../../../../components/config';
-import { ref, onValue } from 'firebase/database';
-import { useState } from 'react/cjs/react.production.min';
+import { ref, onValue, query, orderByChild } from 'firebase/database';
+import { useState, useEffect } from 'react';
 import { Button } from 'react-native-web';
+import { async } from '@firebase/util';
 
 export default function Cases(){
   
-  //const [cases, setCase] = useState([])
-  let date_time = new Date().toLocaleString();
-  
-  function readData(){
-    const starCountRef = ref(db, 'Accidents/CaseID');
-    onValue(starCountRef, (snapshot) => {
-      const data = snapshot.val();
-      console.log(date_time)
-      console.log(data);
-      
-});
+  const [cases, setCases] = useState(null);
 
-  }
+  useEffect(() => {
+    let accidents = {}
+    const dbRef = ref(db, 'Accidents/');
+    onValue(dbRef, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+        
+        const childKey = childSnapshot.key;
+        const childData = childSnapshot.val();
+        accidents[childKey] = childData;
+      });
+      //console.log(accidents);
+      setCases(accidents);
+      
+    }, {
+      onlyOnce: true
+    });
+    }, [])
+  
+
 
   return (
-    <View >
-      <Text onPress={readData}> hello </Text>
+    <ScrollView >
       <StatusBar style="light" backgroundColor="black"/>
-
-
-    </View>
+      <Text>{JSON.stringify(cases, null, 2)}</Text>
+    </ScrollView>
   )
 }
