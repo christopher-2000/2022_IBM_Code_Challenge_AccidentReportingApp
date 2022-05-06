@@ -36,3 +36,7 @@ The major aim of this project is to effectively provide at most support for the 
 
 
 ## Architecture
+  
+  
+## Presentation
+<a href="https://docs.google.com/presentation/d/1_WyUTzkIDlSju8iy96b5mTwsHlTRg6wUsjd6aImlZ9I/edit?usp=sharing">Link to the presentation</a>
