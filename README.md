@@ -2,7 +2,7 @@
 <p align="center"><strong><q>Accidents can happen at any time,<br>Now you can report them at any time.</q></strong></p>  
 
 ## Contents
-- <a href="https://github.com/christopher-2000/2022_IBM_Code_Challenge_AccidentReportingApp#problem-statement">Problem Statement</a>
+- <a href="#problem-statement">Problem Statement</a>
 - <a href="https://github.com/christopher-2000/2022_IBM_Code_Challenge_AccidentReportingApp#personas-of-the-system">Personas of the System</a>
   - <a href="https://github.com/christopher-2000/2022_IBM_Code_Challenge_AccidentReportingApp#individuals">Individuals</a>
   - <a href="https://github.com/christopher-2000/2022_IBM_Code_Challenge_AccidentReportingApp#police-station">Police Station</a>
