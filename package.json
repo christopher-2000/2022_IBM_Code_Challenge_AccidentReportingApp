@@ -31,7 +31,9 @@
     "react-native-screens": "~3.10.1",
     "react-native-svg": "^12.3.0",
     "react-native-textarea": "^1.0.4",
-    "react-native-web": "0.17.1"
+    "react-native-toast-notifications": "^3.2.3",
+    "react-native-web": "0.17.1",
+    "react-toastify": "^9.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

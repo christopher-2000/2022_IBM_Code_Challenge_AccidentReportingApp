@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View,Platform ,StatusBar} from 'react-n
 import { useFonts } from 'expo-font';
 
 import Main from './src/navigation/Main'
+// import { ToastProvider } from 'react-native-toast-notifications';
 
 export default function App() {
 
@@ -26,9 +27,11 @@ export default function App() {
   }
 
   return (
+    // <ToastProvider>
     <SafeAreaView style={styles.container}>
       <Main/>
     </SafeAreaView>
+    // </ToastProvider>
   );
 }
 
