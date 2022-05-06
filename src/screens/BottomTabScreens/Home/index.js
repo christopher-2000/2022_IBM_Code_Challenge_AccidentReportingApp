@@ -5,13 +5,13 @@ import styles from './style';
 import * as Location from 'expo-location';
 import { db } from '../../../../components/config';
 import { ref, set } from 'firebase/database';
-// import { useToast, ToastProvider } from "react-native-toast-notifications";
+import { useToast } from "react-native-toast-notifications";
 
 export default function Home(){
 
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
-  // const toast = useToast();
+  const toast = useToast();
   useEffect(() => {
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
@@ -52,7 +52,8 @@ export default function Home(){
         "vehicle number": "KL-34-324"
       }
     );
-    // toast.show("Accident Reported");
+    toast.show("Accident Reported!! Hang in there.. Help is on the way",
+    {type:"success"});
     console.log("Accident Reported");
   }
 

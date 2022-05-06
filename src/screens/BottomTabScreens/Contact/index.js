@@ -5,9 +5,13 @@ import styles from './style'
 import { AntDesign } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
+import { useToast } from 'react-native-toast-notifications';
 
 
 export default function Contact() {
+
+  const toast = useToast();
+
   return (
     <ScrollView style={styles.container}>
       <StatusBar style="light" backgroundColor="black" />
@@ -52,7 +56,8 @@ export default function Contact() {
         </View>
       </View>
       <View style={{backgroundColor:'black',marginTop:15}}>
-        <Text style={{color:'white',justifyContent: 'center',padding:15,fontSize:16,fontFamily:'Bold'}}>Send Your Query</Text>
+        <Text onPress={() => {toast.show("Thank you!! We will get back to you soon!",{type:"success"})}} 
+    style={{color:'white',justifyContent: 'center',padding:15,fontSize:16,fontFamily:'Bold'}}>Send Your Query</Text>
       </View>
       <View
         style={{height:50}}
