@@ -38,7 +38,28 @@ The major aim of this project is to effectively provide at most support for the 
 
 
 ## Architecture
+### Technologies
+* React-native is used to create all the functionalities and UI in the project as it provides a smooth and responsive user interface, while significantly   reducing load time
+* Firebase authentication is used for the target users login  
+* Firebase is used for the backend of the project
+### Architecture 
+* React-native app of the user, police, hospital and ambulance interacts with the firebase-database to create, edit and veiw accident data
+* And reacts with firebase-autheticatiion to autheticate the user
+* React-native app collects the data from the user based on the components and use-cases and sent to the firebase cloud database
+*data is edited accordingly by all the facilities 
+### keycomponents
+* **Emergency report** : When a user encounters an accident emergency report component is used to send an sos signal to nearest police, hospital and ambulance with time and location of the accident
+* **Accident report** : After emergency report the user can add details that can details that helps the concerned authorities to provide best aid possible
+* **Accidents dashboard** : This component shows the accidents reported by you and other users and the authorities can find detailed report
+* **Automatic report alert** : This component is shows up with an alert message of an accident detected by sensors on the vehicle and sends sos message automatically if not responded
+* **Track ambulance** : This component is used to track ambulance by the victim or authorities 
+
+## 2minutes video
   
   
 ## Presentation
 <a href="https://docs.google.com/presentation/d/1_WyUTzkIDlSju8iy96b5mTwsHlTRg6wUsjd6aImlZ9I/edit?usp=sharing">Link to the presentation</a>
+
+## contributers
+
+## license and acknowledgements
