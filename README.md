@@ -3,12 +3,14 @@
 
 ## Contents
 - <a href="#problem-statement">Problem Statement</a>
-- <a href="https://github.com/christopher-2000/2022_IBM_Code_Challenge_AccidentReportingApp#personas-of-the-system">Personas of the System</a>
-  - <a href="https://github.com/christopher-2000/2022_IBM_Code_Challenge_AccidentReportingApp#individuals">Individuals</a>
-  - <a href="https://github.com/christopher-2000/2022_IBM_Code_Challenge_AccidentReportingApp#police-station">Police Station</a>
-  - <a href="https://github.com/christopher-2000/2022_IBM_Code_Challenge_AccidentReportingApp#hospitals">Hospitals</a>
-  - <a href="https://github.com/christopher-2000/2022_IBM_Code_Challenge_AccidentReportingApp#ambulance-driver">Ambulance Driver</a>
-  - <a href="https://github.com/christopher-2000/2022_IBM_Code_Challenge_AccidentReportingApp#emergency-contacts">Emergency 
+- <a href="#personas-of-the-system">Personas of the System</a>
+  - <a href="#individuals">Individuals</a>
+  - <a href="#police-station">Police Station</a>
+  - <a href="#hospital">Hospitals</a>
+  - <a href="#ambulance-driver">Ambulance Driver</a>
+  - <a href="#emergency-contacts">Emergency</a>
+- <a href="#architecture">Architecture</a>
+- <a href="#presentation">Presentation</a>
 ## Problem Statement  
 The major aim of this project is to effectively provide at most support for the victims of Road accidents. This app aims to digitalize the conventional handling of an accident case by ensuring that immediate medical attention is provided to the victims and proper information is shared with the police station, hospital and emergency contacts.
 
