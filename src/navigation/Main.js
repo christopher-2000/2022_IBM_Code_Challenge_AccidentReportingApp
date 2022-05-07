@@ -61,7 +61,7 @@ export default function Main() {
         >
             <Tab.Screen 
               name="Home" 
-              component={ShowReport} 
+              component={Home} 
               options={{
                 tabBarIcon:({color,size})=>(<Entypo name="home" size={size} color={color}/>),
                 tabBarLabel:()=>null,
