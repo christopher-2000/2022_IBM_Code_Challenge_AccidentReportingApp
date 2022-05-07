@@ -5,10 +5,11 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
         backgroundColor:'white',
-        justifyContent: 'center'
+        
     },
     innerContainer:{
         alignItems: 'center',
+        justifyContent: 'center'
     },
     accident:{
         backgroundColor:'#210474',
