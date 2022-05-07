@@ -15,6 +15,8 @@ import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
+import UserReport from '../screens/ReportPages/UserReport'
+
 import Cases from '../screens/BottomTabScreens/Cases';
 import Home from '../screens/BottomTabScreens/Home';
 import Profile from '../screens/BottomTabScreens/Profile';
