@@ -37,12 +37,14 @@ export default function Contact() {
             <Text style={styles.name}>Full Name</Text>
             <TextInput 
               style={styles.input}
+              placeholder={'Name'}
             />
           </View>
           <View>
             <Text style={styles.name}>Email</Text>
             <TextInput 
               style={styles.input}
+              placeholder={'Email'}
             />
           </View>
           <View>
@@ -50,6 +52,8 @@ export default function Contact() {
             <View>
               <TextInput
                 style={styles.message}
+                multiline={true}
+                placeholder={'Message'}
               />
             </View>
           </View>

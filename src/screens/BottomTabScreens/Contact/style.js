@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     fontSize:16,
     padding:10,
     height:height/4,
-    
+    textAlignVertical: 'top',
   }
 })
 

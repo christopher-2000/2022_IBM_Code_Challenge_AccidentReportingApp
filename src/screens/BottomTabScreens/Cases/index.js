@@ -45,7 +45,7 @@ export default function Cases(){
       <View>
         <Text style={{fontFamily:'Bold',fontSize:22,padding:20}}>Recent Reports by you</Text>
 
-        <View style={{backgroundColor:'green',padding:15,marginTop:16,paddingVertical:20,borderRadius:10,elevation:10,margin:20}}>
+        <View style={{backgroundColor:'green',padding:15,marginTop:5,paddingVertical:20,borderRadius:10,elevation:10,margin:20}}>
           <View style={{flexDirection:'row',justifyContent: 'space-between'}}>
             <Text style={{color:'white',fontFamily:'Bold',fontSize:17}}>{cases[cases.length - 1]["date reported"]} </Text>
             <Text style={{color:'white',fontFamily:'Bold',fontSize:17}}>{cases[cases.length - 1]["time reported"]}</Text>

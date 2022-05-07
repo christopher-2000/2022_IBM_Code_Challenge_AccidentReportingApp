@@ -16,6 +16,12 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
 import UserReport from '../screens/ReportPages/UserReport'
+import HospitalReport from '../screens/ReportPages/HospitalReport'
+import PoliceReport from '../screens/ReportPages/PoliceReport'
+
+import HospitalCase from '../screens/BottomTabScreens/Cases/HospitalCase'
+import PoliceCase from '../screens/BottomTabScreens/Cases/PoliceCase';
+import AmbulanceCase from '../screens/BottomTabScreens/Cases/AmbulanceCase';
 
 import Cases from '../screens/BottomTabScreens/Cases';
 import Home from '../screens/BottomTabScreens/Home';
