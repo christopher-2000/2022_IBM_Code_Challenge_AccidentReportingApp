@@ -10,7 +10,12 @@
   - <a href="#ambulance-driver">Ambulance Driver</a>
   - <a href="#emergency-contacts">Emergency</a>
 - <a href="#architecture">Architecture</a>
+  - <a href="technnologies">Technologies</a>
+  - <a href="architecture-1">Architecture</a>
+  - <a href="keycomponents">Keycomponents</a>
 - <a href="#presentation">Presentation</a>
+- <a href="#contributors">Contributors</a>
+- <a href="#license-and-acknowledgements">License and Acknowledgements</a>
 ## Problem Statement  
 The major aim of this project is to effectively provide at most support for the victims of Road accidents. This app aims to digitalize the conventional handling of an accident case by ensuring that immediate medical attention is provided to the victims and proper information is shared with the police station, hospital and emergency contacts.
 
@@ -47,7 +52,7 @@ The major aim of this project is to effectively provide at most support for the 
 * And reacts with firebase-autheticatiion to autheticate the user
 * React-native app collects the data from the user based on the components and use-cases and sent to the firebase cloud database
 *data is edited accordingly by all the facilities 
-### keycomponents
+### Keycomponents
 * **Emergency report** : When a user encounters an accident emergency report component is used to send an sos signal to nearest police, hospital and ambulance with time and location of the accident
 * **Accident report** : After emergency report the user can add details that can details that helps the concerned authorities to provide best aid possible
 * **Accidents dashboard** : This component shows the accidents reported by you and other users and the authorities can find detailed report
@@ -60,6 +65,6 @@ The major aim of this project is to effectively provide at most support for the 
 ## Presentation
 <a href="https://docs.google.com/presentation/d/1_WyUTzkIDlSju8iy96b5mTwsHlTRg6wUsjd6aImlZ9I/edit?usp=sharing">Link to the presentation</a>
 
-## contributers
+## Contributors
 
-## license and acknowledgements
+## License and Acknowledgements
