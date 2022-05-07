@@ -28,7 +28,14 @@ import Home from '../screens/BottomTabScreens/Home';
 import Profile from '../screens/BottomTabScreens/Profile';
 import Contact from '../screens/BottomTabScreens/Contact';
 
+import User from '../screens/BottomTabScreens/Profile/User';
+import Hospital from '../screens/BottomTabScreens/Profile/Hospital'
+import Police from '../screens/BottomTabScreens/Profile/Police'
+import Ambulance from '../screens/BottomTabScreens/Profile/Ambulance'
+
 import LOGO from '../assets/images/help-logos_transparent.png'
+
+import ShowReport from '../screens/ShowReport'
 
 
 
@@ -54,7 +61,7 @@ export default function Main() {
         >
             <Tab.Screen 
               name="Home" 
-              component={Home} 
+              component={ShowReport} 
               options={{
                 tabBarIcon:({color,size})=>(<Entypo name="home" size={size} color={color}/>),
                 tabBarLabel:()=>null,
@@ -102,7 +109,7 @@ export default function Main() {
             />
             <Tab.Screen 
               name="Profile"
-              component={Profile} 
+              component={Ambulance} 
               options={{
                 tabBarIcon:({color,size})=>(<AntDesign name="profile" size={size} color={color}/>),
                 tabBarLabel:()=>null,
