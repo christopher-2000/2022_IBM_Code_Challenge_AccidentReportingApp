@@ -33,6 +33,11 @@ import Hospital from '../screens/BottomTabScreens/Profile/Hospital'
 import Police from '../screens/BottomTabScreens/Profile/Police'
 import Ambulance from '../screens/BottomTabScreens/Profile/Ambulance'
 
+import UserEdit from '../screens/BottomTabScreens/EditProfile/UserEdit';
+import PoliceEdit from '../screens/BottomTabScreens/EditProfile/PoliceEdit';
+import AmbulanceEdit from '../screens/BottomTabScreens/EditProfile/AmbulanceEdit';
+import HospitalEdit from '../screens/BottomTabScreens/EditProfile/HospitalEdit'
+
 import LOGO from '../assets/images/help-logos_transparent.png'
 
 import ShowReport from '../screens/ShowReport'
@@ -109,7 +114,7 @@ export default function Main() {
             />
             <Tab.Screen 
               name="Profile"
-              component={Ambulance} 
+              component={HospitalEdit} 
               options={{
                 tabBarIcon:({color,size})=>(<AntDesign name="profile" size={size} color={color}/>),
                 tabBarLabel:()=>null,
