@@ -36,7 +36,8 @@
     "react-native-toast-notifications": "^3.2.3",
     "react-native-web": "0.17.1",
     "react-toastify": "^9.0.1",
-    "expo-image-picker": "~12.0.1"
+    "expo-image-picker": "~12.0.1",
+    "react-native-maps": "0.29.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

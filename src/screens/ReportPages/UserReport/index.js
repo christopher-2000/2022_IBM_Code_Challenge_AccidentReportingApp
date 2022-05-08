@@ -4,7 +4,7 @@ import Switches from 'react-native-switches'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
-
+import MapView, {Marker} from 'react-native-maps';
 const {width, height}=Dimensions.get('screen')
 
 export default function UserReport() {
@@ -40,6 +40,35 @@ export default function UserReport() {
                 <Text style={{ fontSize: 20, fontFamily: 'Bold', marginTop: 10 }}>25-04-2022</Text>
                 <Text style={{ fontSize: 20, fontFamily: 'Bold', marginTop: 10 }}>21:05:50</Text>
             </View>
+
+            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginRight: 20 }}>
+                <Text style={{ fontSize: 17, fontFamily: 'Bold', marginTop: 10 }}>Ambulance Required?</Text>
+                <Switches shape={'pill'} showText={false} colorSwitchOn={'black'} colorSwitchOff={'grey'} sliderHeight={25} buttonSize={24} sliderWidth={60} onChange={() => setswitchValue(!switchValue)} value={switchValue} />
+            </View>
+
+            
+            {/*map code */}
+            
+            <MapView
+                // remove if not using Google Maps
+            style={{ marginBottom:'0%', height:300,width:'80%',marginHorizontal:'10%',}}
+            region={{
+                latitude: 37.78825,
+                longitude: -122.4324,
+                latitudeDelta: 0.05,
+                longitudeDelta: 0.05,
+            }}
+            >
+                <Marker coordinate={{
+                latitude: 37.78825,
+                longitude: -122.4324,
+                latitudeDelta: 0.015,
+                longitudeDelta: 0.0121,
+            }} title='Marker' />
+            </MapView>
+                
+            
+            
             <View style={{ marginTop: 5 }}>
                 <Text style={{ fontSize: 15, fontFamily: 'Bold', marginTop: 10 }}>Number of People Injured</Text>
                 <TextInput
@@ -54,6 +83,22 @@ export default function UserReport() {
                     }}
                 />
             </View>
+
+            <View style={{ marginTop: 5 }}>
+                <Text style={{ fontSize: 15, fontFamily: 'Bold', marginTop: 10 }}>Number of People Injured</Text>
+                <TextInput
+                    placeholder='Injured People'
+                    style={{
+                        padding: 10,
+                        backgroundColor: '#E3E5F3',
+                        fontFamily: 'Regular',
+                        fontSize: 15,
+                        marginTop: 10,
+                        borderRadius: 5
+                    }}
+                />
+            </View>
+
             <View>
                 <Text style={{ fontSize: 15, fontFamily: 'Bold', marginTop: 10 }}>Accident Cause</Text>
                 <TextInput
@@ -69,10 +114,7 @@ export default function UserReport() {
                     }}
                 />
             </View>
-            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginRight: 20 }}>
-                <Text style={{ fontSize: 17, fontFamily: 'Bold', marginTop: 10 }}>Ambulance Required?</Text>
-                <Switches shape={'pill'} showText={false} colorSwitchOn={'black'} colorSwitchOff={'grey'} sliderHeight={25} buttonSize={24} sliderWidth={60} onChange={() => setswitchValue(!switchValue)} value={switchValue} />
-            </View>
+
             <View style={{ marginTop: 5 }}>
                 <Text style={{ fontSize: 15, fontFamily: 'Bold', marginTop: 10 }}>Vehicle Numbers</Text>
                 <TextInput
@@ -88,6 +130,7 @@ export default function UserReport() {
                     }}
                 />
             </View>
+
             <View>
                 <Text style={{ fontSize: 15, fontFamily: 'Bold', marginTop: 0 }}>Short description</Text>
                 <TextInput
@@ -103,9 +146,11 @@ export default function UserReport() {
                     }}
                 />
             </View>
+
             <View>
                 <Text style={{ fontSize: 15, fontFamily: 'Bold', marginBottom: 10 }}>Attach Image</Text>
             </View>
+
             <View>
                 {
                     image ? <Image source={{ uri: image }} style={{ width: width/3, height: width/3 }} /> :
@@ -115,12 +160,15 @@ export default function UserReport() {
                 }
 
             </View>
+
             <View style={{ alignItems: 'center', justifyContent: 'center', padding: 12, backgroundColor: '#BA1212', marginTop: 20, borderRadius: 5, }}>
                 <Text style={{ fontSize: 15, fontFamily: 'Bold', color: 'white' }}>SUBMIT</Text>
             </View>
+
             <View
                 style={{ height: 30 }}
             />
+
         </ScrollView>
     )
 }
