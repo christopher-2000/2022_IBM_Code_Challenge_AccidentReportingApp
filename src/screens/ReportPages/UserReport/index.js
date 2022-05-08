@@ -1,4 +1,4 @@
-import { View, Text, TextInput, ScrollView, Pressable,Image,Dimensions } from 'react-native'
+import { View, Text, TextInput, ScrollView, Pressable,Image,Dimensions, Button } from 'react-native'
 import React from 'react'
 import Switches from 'react-native-switches'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -7,7 +7,7 @@ import * as ImagePicker from 'expo-image-picker';
 
 const {width, height}=Dimensions.get('screen')
 
-export default function UserReport() {
+export default function UserReport({navigation}) {
 
     const [switchValue, setswitchValue] = React.useState(false);
 
@@ -115,9 +115,7 @@ export default function UserReport() {
                 }
 
             </View>
-            <View style={{ alignItems: 'center', justifyContent: 'center', padding: 12, backgroundColor: '#BA1212', marginTop: 20, borderRadius: 5, }}>
-                <Text style={{ fontSize: 15, fontFamily: 'Bold', color: 'white' }}>SUBMIT</Text>
-            </View>
+            <View><Button onPress={() => navigation.navigate("Homescreen")} title="SUBMIT" color="#BA1212"/></View>
             <View
                 style={{ height: 30 }}
             />

@@ -9,7 +9,7 @@ const Tab = createStackNavigator();
 
 export function UserCases() {
   return (
-    
+    null
   )
 }
 

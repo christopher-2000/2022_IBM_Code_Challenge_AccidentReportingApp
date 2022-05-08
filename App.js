@@ -1,12 +1,30 @@
-
-import { SafeAreaView, StyleSheet, Text, View,Platform ,StatusBar} from 'react-native';
+import 'react-native-gesture-handler';
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  Platform,
+  StatusBar,
+} from 'react-native';
 import { useFonts } from 'expo-font';
 
-import Main from './src/navigation/Main'
+import Main from './src/navigation/Main';
 import { ToastProvider } from 'react-native-toast-notifications';
+import SelectUser from './src/screens/SelectUser';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import User from './src/screens/BottomTabScreens/Profile/User';
+import PoliceEdit from './src/screens/BottomTabScreens/EditProfile/PoliceEdit';
+import Hospital from './src/screens/BottomTabScreens/Profile/Hospital';
+import HospitalEdit from './src/screens/BottomTabScreens/EditProfile/HospitalEdit';
+import UserEdit from './src/screens/BottomTabScreens/EditProfile/UserEdit';
+import AmbulanceEdit from './src/screens/BottomTabScreens/EditProfile/AmbulanceEdit';
+import Home from './src/screens/BottomTabScreens/Home';
+import UserReport from './src/screens/ReportPages/UserReport';
+import MainScreen from './src/screens/MainScreen';
 
 export default function App() {
-
   const [loaded] = useFonts({
     Black: require('./src/assets/fonts/Roboto-Black.ttf'),
     BlackItalic: require('./src/assets/fonts/Roboto-BlackItalic.ttf'),
@@ -26,11 +44,56 @@ export default function App() {
     return null;
   }
 
+  const Stack = createStackNavigator();
+
   return (
-    <ToastProvider offsetTop={100} placement="top" textStyle={{ fontSize: 22 }}>
-    <SafeAreaView style={styles.container}>
-      <Main/>
-    </SafeAreaView>
+    <ToastProvider offsetTop={100} placement='top' textStyle={{ fontSize: 22 }}>
+      <SafeAreaView style={styles.container}>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name='AuthPage'
+              component={MainScreen}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='Selectuser'
+              component={SelectUser}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='Policeedit'
+              component={PoliceEdit}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='Hospedit'
+              component={HospitalEdit}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='Useredit'
+              component={UserEdit}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='Ambulanceedit'
+              component={AmbulanceEdit}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='Homescreen'
+              component={Main}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='Userreport'
+              component={UserReport}
+              options={{ headerShown: false }}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </SafeAreaView>
     </ToastProvider>
   );
 }
@@ -39,6 +102,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    marginTop:Platform.OS==='ios'?0:StatusBar.currentHeight 
+    marginTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight,
   },
 });

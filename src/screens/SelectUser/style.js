@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flex:1,
         justifyContent: 'center',
+        backgroundColor:"#E5E5E5"
     },
     list:{
         flexGrow: 0,

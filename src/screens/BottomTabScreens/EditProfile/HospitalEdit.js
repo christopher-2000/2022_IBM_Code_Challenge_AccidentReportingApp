@@ -1,7 +1,7 @@
-import { View, Text,Dimensions,TextInput } from 'react-native'
+import { View, Text,Dimensions,TextInput ,Button} from 'react-native'
 import React from 'react'
 const {width, height} = Dimensions.get('screen')
-export default function HospitalEdit() {
+export default function HospitalEdit({navigation}) {
   return (
     <View style={{flex:1,backgroundColor:'white',padding:20}}>
       <Text style={{color:'rgba(0,0,0,0.7)',fontSize:25,fontFamily:'Bold',marginBottom:20}}>Edit Profile/ Hospital</Text>
@@ -73,7 +73,7 @@ export default function HospitalEdit() {
           }}
             />
           </View>
-          <View>
+          <View style={{marginBottom:10}}>
             <Text style={{fontFamily:'Medium',marginTop:20}}>Vehicle Number</Text>
             <TextInput
             placeholder="Add Multiple Vehicle By Adding a ' , '"
@@ -87,9 +87,8 @@ export default function HospitalEdit() {
             />
           </View>
       </View>
-      <View style={{padding:10,alignItems: 'center',justifyContent: 'center',backgroundColor:'#BA1212',marginTop:35}}>
-        <Text style={{color:'white',fontFamily:'Bold'}}>SUBMIT</Text>
-      </View>
+      <Button onPress={() => navigation.navigate("Homescreen")}  title='SUBMIT' color='#BA1212' />
+
     </View>
   )
 }

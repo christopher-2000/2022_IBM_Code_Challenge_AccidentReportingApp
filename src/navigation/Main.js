@@ -46,7 +46,7 @@ import ShowReport from '../screens/ShowReport'
 
 export default function Main() {
   return (
-    <NavigationContainer>
+    // <NavigationContainer>
         <Tab.Navigator
         
           screenOptions={{
@@ -114,7 +114,7 @@ export default function Main() {
             />
             <Tab.Screen 
               name="Profile"
-              component={HospitalEdit} 
+              component={User} 
               options={{
                 tabBarIcon:({color,size})=>(<AntDesign name="profile" size={size} color={color}/>),
                 tabBarLabel:()=>null,
@@ -161,6 +161,6 @@ export default function Main() {
               }}
             />
         </Tab.Navigator>
-    </NavigationContainer>
+    // </NavigationContainer>
   );
 }
