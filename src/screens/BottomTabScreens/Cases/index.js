@@ -5,7 +5,7 @@ import { db } from '../../../../components/config';
 import { ref, onValue, query, orderByChild } from 'firebase/database';
 import { useState, useEffect } from 'react';
 
-export default function Cases(){
+export default function PoliceCase(){
   
   const [cases, setCases] = useState([
     {

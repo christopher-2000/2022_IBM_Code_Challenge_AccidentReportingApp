@@ -87,7 +87,7 @@ export default function PoliceEdit({navigation}) {
             />
           </View>
       </View>
-      <Button onPress={() => navigation.navigate("Homescreen")}  title='SUBMIT' color='#BA1212' />
+      <Button onPress={() => navigation.navigate("HomescreenPolice")}  title='SUBMIT' color='#BA1212' />
 
     </View>
   )

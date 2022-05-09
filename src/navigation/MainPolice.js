@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import AmbulanceHome from '../screens/BottomTabScreens/Home/Ambulance';
 import { Dimensions,View,Text,Image } from 'react-native'
+import PoliceHome from '../screens/BottomTabScreens/Home/police';
 const {height,width}=Dimensions.get('screen');
 
 const Tab = createBottomTabNavigator();
@@ -24,14 +25,15 @@ import PoliceCase from '../screens/BottomTabScreens/Cases/PoliceCase';
 import AmbulanceCase from '../screens/BottomTabScreens/Cases/AmbulanceCase';
 
 import Cases from '../screens/BottomTabScreens/Cases';
-import User from '../screens/BottomTabScreens/Profile/User';
+import Home from '../screens/BottomTabScreens/Home/User';
 import Profile from '../screens/BottomTabScreens/Profile';
 import Contact from '../screens/BottomTabScreens/Contact';
 
-import Home from '../screens/BottomTabScreens/Home/User';
+import User from '../screens/BottomTabScreens/Profile/User';
 import Hospital from '../screens/BottomTabScreens/Profile/Hospital'
 import Police from '../screens/BottomTabScreens/Profile/Police'
 import Ambulance from '../screens/BottomTabScreens/Profile/Ambulance'
+// import Police from '../screens/BottomTabScreens/Profile/Police';
 
 import UserEdit from '../screens/BottomTabScreens/EditProfile/UserEdit';
 import PoliceEdit from '../screens/BottomTabScreens/EditProfile/PoliceEdit';
@@ -44,7 +46,7 @@ import ShowReport from '../screens/ShowReport'
 
 
 
-export default function Main() {
+export default function MainPolice() {
   return (
     // <NavigationContainer>
         <Tab.Navigator
@@ -65,8 +67,8 @@ export default function Main() {
           }}
         >
             <Tab.Screen 
-              name="Home" 
-              component={Home} 
+              name="PoliceHome" 
+              component={PoliceHome} 
               options={{
                 tabBarIcon:({color,size})=>(<Entypo name="home" size={size} color={color}/>),
                 tabBarLabel:()=>null,
@@ -89,8 +91,8 @@ export default function Main() {
               }}
             />
             <Tab.Screen 
-              name="Cases" 
-              component={Cases} 
+              name="PoliceCases" 
+              component={PoliceCase} 
               options={{
                 tabBarIcon:({color,size})=>(<FontAwesome5 name="car-crash" size={size} color={color} />),
                 tabBarLabel:()=>null,
@@ -113,8 +115,8 @@ export default function Main() {
               }}
             />
             <Tab.Screen 
-              name="Profile"
-              component={User} 
+              name="ProfilePolice"
+              component={Police} 
               options={{
                 tabBarIcon:({color,size})=>(<AntDesign name="profile" size={size} color={color}/>),
                 tabBarLabel:()=>null,

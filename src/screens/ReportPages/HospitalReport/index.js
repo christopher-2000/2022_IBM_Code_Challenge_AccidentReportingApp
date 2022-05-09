@@ -1,4 +1,4 @@
-import { View, Text, TextInput, ScrollView, Pressable,Image,Dimensions } from 'react-native'
+import { View, Text, TextInput, ScrollView, Pressable,Image,Dimensions,Button } from 'react-native'
 import React from 'react'
 import Switches from 'react-native-switches'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -7,7 +7,7 @@ import * as ImagePicker from 'expo-image-picker';
 
 const {width, height}=Dimensions.get('screen')
 
-export default function HospitalReport() {
+export default function HospitalReport({navigation}) {
   return (
     <ScrollView style={{ flex: 1, backgroundColor: 'white', padding: 20 }}>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -108,7 +108,7 @@ export default function HospitalReport() {
 
 
             <View style={{ alignItems: 'center', justifyContent: 'center', padding: 12, backgroundColor: '#BA1212', marginTop: 30, borderRadius: 5, }}>
-                <Text style={{ fontSize: 15, fontFamily: 'Bold', color: 'white' }}>SUBMIT</Text>
+            <Button onPress={() => navigation.navigate("Homescreen")} title="SUBMIT" color="#BA1212"/>
             </View>
             <View
                 style={{ height: 50 }}

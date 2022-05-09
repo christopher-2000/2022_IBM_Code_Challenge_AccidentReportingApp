@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+// import HospitalHome from '../screens/BottomTabScreens/Home/HospitalHome';
+// import AmbulanceHome from '../screens/BottomTabScreens/Home/Ambulance';
 import { Dimensions,View,Text,Image } from 'react-native'
 const {height,width}=Dimensions.get('screen');
 
@@ -22,13 +23,14 @@ import PoliceReport from '../screens/ReportPages/PoliceReport'
 import HospitalCase from '../screens/BottomTabScreens/Cases/HospitalCase'
 import PoliceCase from '../screens/BottomTabScreens/Cases/PoliceCase';
 import AmbulanceCase from '../screens/BottomTabScreens/Cases/AmbulanceCase';
+import HospitalHome from '../screens/BottomTabScreens/Home/HospitalHome';
 
 import Cases from '../screens/BottomTabScreens/Cases';
-import User from '../screens/BottomTabScreens/Profile/User';
+import Home from '../screens/BottomTabScreens/Home/User';
 import Profile from '../screens/BottomTabScreens/Profile';
 import Contact from '../screens/BottomTabScreens/Contact';
 
-import Home from '../screens/BottomTabScreens/Home/User';
+import User from '../screens/BottomTabScreens/Profile/User';
 import Hospital from '../screens/BottomTabScreens/Profile/Hospital'
 import Police from '../screens/BottomTabScreens/Profile/Police'
 import Ambulance from '../screens/BottomTabScreens/Profile/Ambulance'
@@ -44,7 +46,7 @@ import ShowReport from '../screens/ShowReport'
 
 
 
-export default function Main() {
+export default function MainHospital() {
   return (
     // <NavigationContainer>
         <Tab.Navigator
@@ -65,8 +67,8 @@ export default function Main() {
           }}
         >
             <Tab.Screen 
-              name="Home" 
-              component={Home} 
+              name="HospitalHome" 
+              component={HospitalHome} 
               options={{
                 tabBarIcon:({color,size})=>(<Entypo name="home" size={size} color={color}/>),
                 tabBarLabel:()=>null,
@@ -89,8 +91,8 @@ export default function Main() {
               }}
             />
             <Tab.Screen 
-              name="Cases" 
-              component={Cases} 
+              name="HospitalCases" 
+              component={HospitalCase} 
               options={{
                 tabBarIcon:({color,size})=>(<FontAwesome5 name="car-crash" size={size} color={color} />),
                 tabBarLabel:()=>null,
@@ -113,8 +115,8 @@ export default function Main() {
               }}
             />
             <Tab.Screen 
-              name="Profile"
-              component={User} 
+              name="ProfileHospital"
+              component={Hospital} 
               options={{
                 tabBarIcon:({color,size})=>(<AntDesign name="profile" size={size} color={color}/>),
                 tabBarLabel:()=>null,

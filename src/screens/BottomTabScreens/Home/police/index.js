@@ -8,11 +8,11 @@ import {
   ScrollView, Text, View
 } from 'react-native';
 import { useToast } from 'react-native-toast-notifications';
-import { db } from '../../../../components/config';
-import styles from './style';
+import { db } from '../../../../../components/config';
+import styles from '../User/style';
 const { width, height } = Dimensions.get('screen');
 
-export default function Home({ navigation }) {
+export default function PoliceHome({ navigation }) {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
   const toast = useToast();
@@ -178,7 +178,7 @@ export default function Home({ navigation }) {
         <Text style={styles.help}>Would you need Help?</Text>
         <Pressable
           onPress={() => {
-            navigation.navigate("Userreport")
+            navigation.navigate("Ambulancereport")
           }}
           style={styles.accident}
         >

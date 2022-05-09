@@ -10,6 +10,9 @@ import {
 import { useFonts } from 'expo-font';
 
 import Main from './src/navigation/Main';
+import MainPolice from './src/navigation/MainPolice';
+import MainAmbulance from './src/navigation/MainAmbulance';
+import MainHospital from './src/navigation/MainHospital';
 import { ToastProvider } from 'react-native-toast-notifications';
 import SelectUser from './src/screens/SelectUser';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -20,8 +23,9 @@ import Hospital from './src/screens/BottomTabScreens/Profile/Hospital';
 import HospitalEdit from './src/screens/BottomTabScreens/EditProfile/HospitalEdit';
 import UserEdit from './src/screens/BottomTabScreens/EditProfile/UserEdit';
 import AmbulanceEdit from './src/screens/BottomTabScreens/EditProfile/AmbulanceEdit';
-import Home from './src/screens/BottomTabScreens/Home';
+// import Home from './src/screens/BottomTabScreens/Home';
 import UserReport from './src/screens/ReportPages/UserReport';
+import HospitalReport from './src/screens/ReportPages/HospitalReport';
 import MainScreen from './src/screens/MainScreen';
 
 export default function App() {
@@ -80,17 +84,37 @@ export default function App() {
               name='Ambulanceedit'
               component={AmbulanceEdit}
               options={{ headerShown: false }}
-            />
+            />            
             <Stack.Screen
               name='Homescreen'
               component={Main}
               options={{ headerShown: false }}
             />
             <Stack.Screen
+              name='HomescreenHospital'
+              component={MainHospital}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='HomescreenPolice'
+              component={MainPolice}
+              options={{ headerShown: false }}
+            />            
+            <Stack.Screen
+              name='Homescreenambulance'
+              component={MainAmbulance}
+              options={{ headerShown: false }}
+            />  
+            <Stack.Screen
               name='Userreport'
               component={UserReport}
               options={{ headerShown: false }}
             />
+            <Stack.Screen
+              name='Ambulancereport'
+              component={HospitalReport}
+              options={{ headerShown: false }}
+            />            
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaView>

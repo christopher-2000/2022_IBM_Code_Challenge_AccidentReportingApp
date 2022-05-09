@@ -1,8 +1,8 @@
-import { View, Text } from 'react-native'
+import { View, Text,Button } from 'react-native'
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 
-export default function Ambulance() {
+export default function Ambulance({navigation}) {
   return (
     <View style={{flex:1,backgroundColor:'white',padding:20}}>
       <StatusBar style="light" backgroundColor="black"/>
@@ -12,9 +12,9 @@ export default function Ambulance() {
           <Text style={{color:'rgba(0,0,0,0.5)',fontSize:20,fontFamily:'Black'}}>abc@gmail.com</Text>
       </View>
 
-      <View style={{padding:10,alignItems: 'center',justifyContent: 'center',borderWidth:1,borderColor:'rgba(0,0,0,0.1)',marginTop:10}}>
-          <Text style={{color:'rgba(0,0,0,0.7)',fontSize:14,fontFamily:'Black'}}>Edit Profile</Text>
-      </View>
+      <Button onPress={() => {
+        navigation.navigate("Ambulanceedit")
+      }}  title="Edit Profile" color={"gray"} />
 
       <View style={{marginTop:20}}>
           <Text style={{color:'rgba(0,0,0,0.3)',fontSize:16,fontFamily:'Black'}}>vehicle number</Text>

@@ -87,7 +87,7 @@ export default function HospitalEdit({navigation}) {
             />
           </View>
       </View>
-      <Button onPress={() => navigation.navigate("Homescreen")}  title='SUBMIT' color='#BA1212' />
+      <Button onPress={() => navigation.navigate("HomescreenHospital")}  title='SUBMIT' color='#BA1212' />
 
     </View>
   )

@@ -103,7 +103,7 @@ export default function AmbulanceEdit({navigation}) {
         </View>
       </View>
       <Button
-        onPress={() => navigation.navigate('Homescreen')}
+        onPress={() => navigation.navigate('Homescreenambulance')}
         title='SUBMIT'
         color='#BA1212'
       />
