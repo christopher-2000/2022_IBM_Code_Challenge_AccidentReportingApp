@@ -60,6 +60,8 @@ The major aim of this project is to effectively provide at most support for the 
 * **Track ambulance** : This component is used to track ambulance by the victim or authorities 
 
 ## 2minutes video
+
+<a href="https://github.com/christopher-2000/2022_IBM_Code_Challenge_AccidentReportingApp.git">Link of 2 minute video presentation</a>
   
   
 ## Presentation
