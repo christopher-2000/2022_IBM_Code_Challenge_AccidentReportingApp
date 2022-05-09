@@ -66,6 +66,10 @@ The major aim of this project is to effectively provide at most support for the 
 <a href="https://docs.google.com/presentation/d/1_WyUTzkIDlSju8iy96b5mTwsHlTRg6wUsjd6aImlZ9I/edit?usp=sharing">Link to the presentation</a>
 
 ## Contributors
-* 
+* <a href="https://www.linkedin.com/in/christopher2000">M G Christopher</a>
+* <a href="https://www.linkedin.com/in/kumari-misa-030337207/">Kumari Misa</a>
+* <a href="https://www.linkedin.com/in/piyush-bansal-56074a1a6/">Piyush Bansal</a>
+* <a href="https://www.linkedin.com/in/rithish-kumar-gajjala-361697206/">G Rithish Kumar</a>
+* <a href="https://www.linkedin.com/in/surya-ashish/">B V Surya Ashish</a>
 
 ## License and Acknowledgements
