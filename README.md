@@ -61,7 +61,7 @@ The major aim of this project is to effectively provide at most support for the 
 
 ## 2minutes video
 
-<a href="https://github.com/christopher-2000/2022_IBM_Code_Challenge_AccidentReportingApp.git">Link of 2 minute video presentation</a>
+<a href="https://drive.google.com/file/d/1Cub0Kh2wsXUXCu3zMiK6BW9X-NTacyQ0/view?usp=drivesdk">Link of 2 minute video presentation</a>
   
   
 ## Presentation
