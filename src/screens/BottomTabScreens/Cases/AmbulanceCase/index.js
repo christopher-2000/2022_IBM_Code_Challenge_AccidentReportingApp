@@ -4,9 +4,9 @@ import { StatusBar } from 'expo-status-bar'
 // import { db } from '../../../../components/config';
 // import { ref, onValue, query, orderByChild } from 'firebase/database';
 // import { useState, useEffect } from 'react';
+import MapView, {Marker} from 'react-native-maps';
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
-
 const { width, height } = Dimensions.get('screen')
 
 export default function AmbulanceCase() {
@@ -88,6 +88,22 @@ export default function AmbulanceCase() {
                             </View>
                             <Text style={{ color: 'white', fontFamily: 'Regular', fontSize: 15, marginTop: 8 }}>Banarjee Rd, kochi</Text>
                             <Text style={{ color: 'white', fontFamily: 'Regular', fontSize: 15 }}>Status: Requesting Ambulance</Text>
+                            <MapView
+                            style={{ marginBottom:'0%', height:200,width:'80%',marginHorizontal:'10%',}}
+                            region={{
+                                latitude: 37.78825,
+                                longitude: -122.4324,
+                                latitudeDelta: 0.05,
+                                longitudeDelta: 0.05,
+                            }}
+                            >
+                                <Marker coordinate={{
+                                latitude: 37.78825,
+                                longitude: -122.4324,
+                                latitudeDelta: 0.015,
+                                longitudeDelta: 0.0121,
+                            }} title='Marker' />
+                            </MapView>
                             <View style={{ marginTop: 20 }}>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Ionicons name="md-location" size={30} color="white" />
@@ -97,6 +113,7 @@ export default function AmbulanceCase() {
                                     <FontAwesome5 name="hospital-alt" size={26} color="white" />
                                     <Text style={{ color: 'white', marginLeft: 20, fontSize: 15, fontFamily: 'Bold' }}>Amala Hospital, thrissur 680523 </Text>
                                 </View>
+                                
                             </View>
 
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 20, marginHorizontal: width / 9 }}>
