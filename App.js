@@ -27,6 +27,7 @@ import AmbulanceEdit from './src/screens/BottomTabScreens/EditProfile/AmbulanceE
 import UserReport from './src/screens/ReportPages/UserReport';
 import HospitalReport from './src/screens/ReportPages/HospitalReport';
 import MainScreen from './src/screens/MainScreen';
+import AmbulanceTracker from './src/screens/AmbulanceTracker';
 
 export default function App() {
   const [loaded] = useFonts({
@@ -84,7 +85,7 @@ export default function App() {
               name='Ambulanceedit'
               component={AmbulanceEdit}
               options={{ headerShown: false }}
-            />            
+            />
             <Stack.Screen
               name='Homescreen'
               component={Main}
@@ -99,12 +100,12 @@ export default function App() {
               name='HomescreenPolice'
               component={MainPolice}
               options={{ headerShown: false }}
-            />            
+            />
             <Stack.Screen
               name='Homescreenambulance'
               component={MainAmbulance}
               options={{ headerShown: false }}
-            />  
+            />
             <Stack.Screen
               name='Userreport'
               component={UserReport}
@@ -114,7 +115,11 @@ export default function App() {
               name='Ambulancereport'
               component={HospitalReport}
               options={{ headerShown: false }}
-            />            
+            />
+            <Stack.Screen
+              name='Ambulancetracker'
+              component={AmbulanceTracker}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaView>

@@ -1,11 +1,11 @@
-import { ScrollView, Text ,Image,FlatList,View} from 'react-native'
+import { ScrollView, Text ,Image,FlatList,View, Button} from 'react-native'
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { db } from '../../../../components/config';
 import { ref, onValue, query, orderByChild } from 'firebase/database';
 import { useState, useEffect } from 'react';
 
-export default function PoliceCase(){
+export default function PoliceCase({navigation}){
   
   const [cases, setCases] = useState([
     {
@@ -52,6 +52,7 @@ export default function PoliceCase(){
           </View>
           <Text style={{color:'white',fontFamily:'Regular',fontSize:15,marginTop:8}}>{cases[cases.length - 1]["vehicle number"]}</Text>
           <Text style={{color:'white',fontFamily:'Regular',fontSize:15}}>Status: {cases[cases.length - 1]["status"]}</Text>
+        <Button title="Track Ambulance" color={"transparent"}  onPress={() => {navigation.navigate("Ambulancetracker")}}/>
         </View>
       </View>
 
