@@ -52,12 +52,18 @@ The major aim of this project is to effectively provide at most support for the 
 * And reacts with firebase-autheticatiion to autheticate the user
 * React-native app collects the data from the user based on the components and use-cases and sent to the firebase cloud database
 *data is edited accordingly by all the facilities 
+
+![WhatsApp Image 2022-05-09 at 5 26 11 PM](https://user-images.githubusercontent.com/72222785/167405476-0f749702-aeb7-47d1-897b-cf5bfd7e5f9f.jpeg)
+![WhatsApp Image 2022-05-09 at 5 26 11 PM (1)](https://user-images.githubusercontent.com/72222785/167405501-1ad16ceb-f8c8-42df-a86c-c20c98963734.jpeg)
+
 ### Keycomponents
 * **Emergency report** : When a user encounters an accident emergency report component is used to send an sos signal to nearest police, hospital and ambulance with time and location of the accident
 * **Accident report** : After emergency report the user can add details that can details that helps the concerned authorities to provide best aid possible
 * **Accidents dashboard** : This component shows the accidents reported by you and other users and the authorities can find detailed report
 * **Automatic report alert** : This component is shows up with an alert message of an accident detected by sensors on the vehicle and sends sos message automatically if not responded
 * **Track ambulance** : This component is used to track ambulance by the victim or authorities 
+
+
 
 ## 2minutes video
 
